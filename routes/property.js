@@ -16,6 +16,11 @@ const data = [
     name: 'Sandratek Permai',
     addr: 'Jl Sandratek',
     price: 1650800000
+  },
+  {
+    name: 'Rempoa Permai',
+    addr: 'Jl Rempoa',
+    price: 1650800000
   }
 ];
 
@@ -32,7 +37,7 @@ router.post('/', (req, res) => {
 });
 
 router.delete('/', (req, res) => {
-  const id = req.query.id;
+  const id = req.query?.id;
   data.splice(id-1, 1)
   res.status(200).end();
 });
